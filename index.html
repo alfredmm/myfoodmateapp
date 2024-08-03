@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Landing Page template for apps food delivery">
+    <meta name="keywords" content="landing page, food, app, template"/>
+    <meta name="author" content="Johnny Pacheco - johnny-pacheco.com" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="assets/images/icon.png" type="image/x-icon">
+    <link async href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>My Food Mate - Taste for Every Moment🍕</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="brand"><img src="assets/images/logo.png"></a>
+            <ul id="list-options-header" >
+                <li class="active" >
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/menu">Menu</a>
+                </li>
+                <li>
+                    <a href="/#contact">Contact Us</a>
+                </li>
+            </ul>
+            <div role="button" name="button-toggle-menu" class="toggle-menu" >
+                <i  class="animated fas fa-bars"></i>
+                <i  class="animated none fas fa-times"></i>
+            </div>
+        </nav>
+    </header>
+    <section class="portrait">
+        <h5 class="caption">My Food Mate, Makes you Eat..</h5>
+        <h1 class="title-portrait" >
+            Don't get Hungry😑
+        </h1>
+        <h3 class="subtitle_portrait">
+            Order your Favorite Taste, We will Deliver🌭
+        </h3>
+        <div class="container__buttons--portrait">
+            <a href="#top_products">
+                <button class="button__portrait accent">
+                    Top Picks💥
+                </button>
+            </a>
+            <a href="/menu.html">
+                <button class="button__portrait outline">
+                    Browse all Foods
+                </button>
+            </a>
+        </div>
+    </section>
+    <h1 class="" style="text-align: center; padding: 10px;font: sans-serif;font-style: oblique;">
+        Most Favorite🌟 What Others Like Most...
+    </h1>
+    <div class="product-container", id="top_products">
+        <div class="product-row">
+            <div class="product">
+                <img src="assets/images/African Plate.PNG" alt="African Plate">
+                <h2>African Plate</h2>
+                <p>African in your Memories</p>
+                <button class="add-to-cart" data-id="3" data-name="Africa Plate" data-price="3279">Add to Cart</button>
+                <p><a href="/menu.html"><h2"><b><i style="color: chocolate;">Browse the Menu🍕</i></b></h2></a></p>
+            </div>
+            <div class="product">
+                <img src="assets/images/burger small.PNG" alt="Burger">
+                <h2>Burger Liost</h2>
+                <p>Delicacy for everyone</p>
+                <button class="add-to-cart" data-id="4" data-name="Burger liost" data-price="1429">Add to Cart</button>
+                <p><a href="/menu.html"><h2"><b><i style="color: chocolate;">Browse the Menu🍕</i></b></h2></a></p>
+            </div>
+            <div class="product">
+                <img src="assets/images/Cheese Pizza.PNG" alt="Cheese Lones">
+                <h2>Cheese Lones</h2>
+                <p>Good for your Memories</p>
+                <button class="add-to-cart" data-id="5" data-name="Cheese Lones" data-price="2364">Add to Cart</button>
+                <p><a href="/menu.html"><h2"><b><i style="color: chocolate;">Browse the Menu🍕</i></b></h2></a></p>
+            </div>
+            <div class="product">
+                <img src="assets/images/mellon.PNG" alt="Mellon">
+                <h2>Mellon Fruite Slice</h2>
+                <p>Boosst your Vitamins</p>
+                <button class="add-to-cart" data-id="6" data-name="Mellon Fruit Slice" data-price="109">Add to Cart</button>
+                <p><a href="/menu.html"><h2"><b><i style="color: chocolate;">Browse the Menu🍕</i></b></h2></a></p>
+            </div>
+        </div>        
+    </div>
+      
+      
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total"></div>
+            <button id="paypal-button">Pay with PayPal</button>
+            <button id="reset-cart">Reset Cart</button> </div>
+        </div>
+    </div>
+    <section id="step_by_step">
+        <div class="title_step_by_step--section">
+            <hr />
+            <h2>Don't get Hungry😑</h2>
+        </div>
+        <article class="step step-left">
+            <div class="step_info">
+                <h4 class="caption">We Make you Eat😊</h4>
+                <h3 class="title_step" >Shop for your favorites meal!</h3>
+                <p class="description_step">
+                    We will Deliver...
+                </p>
+            </div>
+            <div class="container_image">
+                <img src="assets/images/screens_login.png" alt="">
+            </div>
+        </article>
+    </section>
+    <section id="download_section" >
+        <h2>Get the Most out of Every Moment!</h2>
+        <p>We've All the Delicacies</p>
+        <div class="container__buttons--download_section">
+            <button class="accent">
+                Browse the Menu
+            </button>
+            <button class="outline outline_white">
+                Contact Us
+            </button>
+        </div>
+    </section>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
