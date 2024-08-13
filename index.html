@@ -18,6 +18,9 @@
         <nav>
             <a href="#" class="brand"><img src="assets/images/logo.png"></a>
             <button id="view-cart">View My Cart</button>
+            <a href="/login.html"><button id="login">Log In <span class="login-icon">&#x1F512;</span></button"></a>
+            <span class="fa fa-sign-in" aria-hidden="true"></span>
+            <a href="/signup.html"><button id="signup">Sign Up <span class="fa fa-user-plus" aria-hidden="true"></span></button></a>
             <ul id="list-options-header" >
                 <li class="active" >
                     <a href="/">Home</a>
@@ -35,6 +38,44 @@
             </div>
         </nav>
     </header>
+    <!-- Login Modal -->
+<div id="login-modal" class="auth-modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Log In</h2>
+        <form id="login-form">
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" name="username" required>
+            
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+            
+            <button type="submit">Log In</button>
+        </form>
+        <p>Don't have an account? <a href="#" id="switch-to-signup">Sign Up</a></p>
+    </div>
+</div>
+
+<!-- Signup Modal -->
+<div id="signup-modal" class="auth-modal" style="display: none;">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <label for="signup-username">Username:</label>
+            <input type="text" id="signup-username" name="username" required>
+            
+            <label for="signup-password">Password:</label>
+            <input type="password" id="signup-password" name="password" required>
+            
+            <label for="signup-confirm-password">Confirm Password:</label>
+            <input type="password" id="signup-confirm-password" name="confirm-password" required>
+            
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" id="switch-to-login">Log In</a></p>
+    </div>
+</div>
     <section class="portrait">
         <h5 class="caption">My Food Mate, Makes you Eat..</h5>
         <h1 class="title-portrait" >
@@ -95,7 +136,7 @@
     <!-- Cart Modal -->
     <div id="cart-modal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
+            <!--<span class="close">&times;</span>-->
             <h2>Your Cart</h2>
             <div id="cart-items"></div>
             <div id="cart-total"></div>
@@ -103,8 +144,8 @@
             <button id="reset-cart">Reset Cart</button> </div>
         </div>
     </div>
-      <!-- Contact us Modal -->
-      <div id="contact-modal" class="modal">
+      <!-- Contact us Modal 
+      <div id="contact-modal" class="contact-modal">
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2>Contact us</h2>
@@ -122,6 +163,7 @@
             <button id="reset-form" type="reset">Reset Form</button> </div>
         </div>
     </div>
+    -->
     <section id="step_by_step">
         <div class="title_step_by_step--section">
             <hr />
@@ -147,11 +189,9 @@
             <button class="accent">
                 Browse the Menu
             </button>
-            <a href="#contact-modal">
-                <button class="outline outline_white">
-                    Contact Us
-                </button>
-            </a>
+            <button class="outline outline_white" id ="contact-button">
+                Contact Us
+            </button>
         </div>
     </section>
     <script src="scripts/main.js"></script>

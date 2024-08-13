@@ -1,15 +1,3 @@
-window.onload = function () {
-    let togleMenu = false;
-    const menuList = document.getElementById('list-options-header');
-    const menuTogleButton = document.getElementsByClassName('toggle-menu')[0];
-    menuTogleButton.addEventListener('click', function () {
-            togleMenu = !togleMenu;
-            hidden(menuTogleButton.children [togleMenu ? 0 : 1]);
-            show(menuTogleButton.children [!togleMenu ? 0 : 1]);
-            if(togleMenu) menuList.classList.add('show');
-            else menuList.classList.remove('show');
-        });
-};
 
 function hidden(element){
     element.classList.add('hidden');
@@ -143,3 +131,24 @@ function updateCartUI() {
 
 // Attach the resetCart function to the reset button
 document.getElementById('reset-cart').addEventListener('click', resetCart);
+
+// Close contact modal
+contactClose.onclick = function() {
+    contact-modal.classList.remove("show");
+}
+
+// Send message
+messageBtn.onclick = function() {
+    // Here you would typically send the form data to a server
+    // For this example, we'll just log it to the console
+    const formData = new FormData(contactForm);
+    console.log("Form data:", Object.fromEntries(formData));
+    alert("Message sent successfully!");
+    contact-modal.classList.remove("show");
+}
+
+// Reset form
+resetFormBtn.onclick = function() {
+    contactForm.reset();
+}
+

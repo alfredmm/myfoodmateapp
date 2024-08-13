@@ -83,16 +83,22 @@ header {
 nav{
     height: 100px;
     box-sizing: border-box;
-    padding: 5px 20px;
+    padding: 5px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+ nav>button{
+    font-weight: 100;
+    font-size: 20px;
+    margin-right: 10px;
+    color: #000;
+    background-color: var(--color-accent);
+ }
 a.brand {
     text-decoration: none;
     height: 100%;
-    width: 200px;
+    width: 150px;
     display: flex;
     align-items: center;
 }
@@ -162,7 +168,6 @@ h3.subtitle_portrait {
     align-items: center;
     justify-content: space-evenly;
 }
-
 
 #screens_together {
     width: 100%;
@@ -456,18 +461,39 @@ h1 {
 }
 
 .add-to-cart, #view-cart {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 15px;
-    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border:var(--color-accent) 3px solid;
     cursor: pointer;
-    border-radius: 3px;
+    border-radius: 25px;
     transition: background-color 0.3s ease;
 }
 
 .add-to-cart:hover, #view-cart:hover {
-    background-color: #2980b9;
+    background-color: var(--color-accent);
+    color: var(--color-white)
 }
+#login, #signup {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    border:var(--color-accent) 3px solid;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: fit-content;
+}
+#login:hover, #signup:hover {
+    background-color: var(--color-white);
+    color: var(--color-text-black);
+    border:var(--color-accent) 3px solid;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+    width: 150px;
+    height: fit-content;
+}
+
 
 /* Modal Styles */
 .modal {
@@ -595,56 +621,278 @@ h1 {
     max-width: 100%;
     height: 50%;
   }
-  #contact-items {
+/* Contact Modal Styles */
+#contact-modal .modal-content {
+    max-width: 600px;
+}
+
+#contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     margin-bottom: 20px;
 }
 
-#contact-items ul {
-    list-style-type: none;
-    padding: 0;
+#contact-items label {
+    font-weight: bold;
 }
 
-#contact-items li {
-    background-color: #ecf0f1;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
+#contact-items input,
+#contact-items textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#contact-items li:hover {
-    background-color: #d5dbdb;
+#contact-items textarea {
+    resize: vertical;
+}
+
+#contact-modal button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-right: 10px;
 }
 
 #message {
-    background-color: #0070ba;
+    background-color: #fafafa;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-    display: block;
-    width: 100%;
-    font-size: 16px;
+    border:solid #e77123 2px;
+    border-radius: 15px;
 }
+
 #reset-form {
-    background-color: #e4af3d;
+    background-color: #e77123;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 3px;
-    transition: background-color 0.3s ease;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    margin-top: 15px;
+    border:solid #e77123 2px;
+    border-radius: 15px;
 }
 
 #message:hover {
-    background-color: #003087;
+    background-color: #3d7bcc;
 }
+
 #reset-form:hover {
-    background-color: #d85c23;
+    background-color: #e77123;
+    border: #e77123 2px solid;
+    border-radius: 24px 0 24px 0;
+}
+.auth-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.auth-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal label {
+    margin-top: 10px;
+}
+
+.auth-modal input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.auth-modal button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-modal button:hover {
+    background-color: #45a049;
+}
+
+/* Signup Page */
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-header {
+    background-color: var(--color-accent);
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    height: 100px;
+}
+
+.form-header h2 {
+    font-size: xx-large;
+    color: var(--color-white);
+    padding-top: 30px;
+}
+
+.signup-form {
+    padding: 30px;
+}
+
+.login-form {
+    padding: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: var(--color-white);
+    border: 6px solid var(--color-accent);
+    border-style: dotted;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #000;
+}
+
+@media screen and (max-width: 650px) {
+    .container {
+        max-width: 100%;
+    }
+}
+.logout:hover{
+    color: black;
+    text-decoration: wavy;
+    text-shadow: #FA4A0C 1px 0 10px;
+}
+
+#cart-items {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.cart-item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cart-item:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.cart-item-details {
+    flex-grow: 1;
+}
+
+.cart-item h3 {
+    margin: 0 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.cart-item p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.remove-item {
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-item:hover {
+    background-color: #ff4d4d;
 }
